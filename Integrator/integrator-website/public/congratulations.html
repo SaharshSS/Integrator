@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations</title>
+    <link rel="stylesheet" href="styles/congratulations.css">
+</head>
+<body>
+    <div>
+        <h1>Good Job! 🎉</h1>
+        <p>You have completed the quiz!</p>
+        <p>Your final score is: <span id="finalScore">0</span></p>
+        <button onclick="goHome()">Go to Home</button>
+    </div>
+
+    <script>
+        // Retrieve the final score from localStorage
+        const finalScore = localStorage.getItem('finalScore');
+
+        // Check if the score exists and display it
+        if (finalScore !== null) {
+            document.getElementById('finalScore').textContent = finalScore;
+        } else {
+            document.getElementById('finalScore').textContent = '0'; // Default to 0 if no score is found
+        }
+
+        function goHome() {
+            // Redirect to the loading page with home.html as the target
+            window.location.href = 'loading.html?target=home.html';
+        }
+    </script>
+</body>
+</html>

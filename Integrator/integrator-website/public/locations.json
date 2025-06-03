@@ -1,0 +1,404 @@
+[
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747152938114!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDQ0b19CcXdF!2m2!1d39.01946079702463!2d125.7535510692188!3f191.55612559929727!4f-4.279829649158202!5f0.4000000000000002",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which country is this landmark located in?",
+          "options": ["France", "North Korea", "Germany", "Spain"],
+          "answer": "North Korea",
+          "hint": "This country is known for its strict regime and is located in East Asia."
+        },
+        {
+          "type": "text",
+          "question": "What is the name of this landmark?",
+          "answer": "Juche Tower",
+          "hint": "It's a monument dedicated to the Juche ideology."
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747109485738!6m8!1m7!1s7bp3U1UKGE_o-ROr6db8ug!2m2!1d51.507351!2d-0.127758!3f253.0413683838271!4f-11.14930815278598!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is visible?", "answer": "Big Ben", 
+          "hint": "This landmark is located in London." 
+        },
+        { "question": "What language is visible on the street signs?", "answer": "English" },
+        {
+          "type": "multiple-choice",
+          "question": "What type of vehicles are visible on the street?",
+          "options": ["Motorcycles", "Buses and Cars", "Cars", "Train"],
+          "answer": "Buses and Cars"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747113778369!6m8!1m7!1sNWZnK1X8uNn99dyveNEfFw!2m2!1d48.208174!2d16.373819!3f202.67822698216042!4f-7.415676254358221!5f0.7820865974627469",
+      "questions": [
+        { "type": "multiple_choice", 
+          "question": "What type of religious building is visual?", 
+          "options": ["Church", "Cathedral", "Temple"],
+          "answer": "Cathedral" },
+        { "question": "What language is visible on the street signs?", "answer": "German" }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747115934572!6m8!1m7!1sBGGvl0Fv9oEkhNh8owDCmg!2m2!1d35.682839!2d139.759455!3f312.4803930199843!4f-3.438952708062234!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous building is visible?", "answer": "Tokyo Station" },
+        { "type": "multiple-choice",
+            "question": "What is the weather like?", 
+            "options": ["Clear and sunny", "Cloudy", "Partly Cloudy", "Rainy"],
+            "answer": "Clear and sunny" },
+        { "question": "What city is this in?", "answer": "Tokyo" },
+        { "type": "multiple-choice",
+            "question": "What type of vehicles are visible?", 
+            "options": ["Cars", "Buses", "Boats", "Motorcycles"],
+            "answer": "Buses" }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747120200549!6m8!1m7!1sfRGVjgxJ4-7OSLB0sbV-Qw!2m2!1d51.165691!2d10.451526!3f208.31369540635517!4f-10.94871214011585!5f0.7820865974627469",
+      "questions": [
+        { "type": "multiple-choice",
+            "question": "Is this an urban, or rural environment?", 
+            "options": ["Urban", "Rural"],
+            "answer": "Rural" },
+        { "type": "multiple-choice",
+            "question": "What type of roads are visible?", 
+            "options": ["Gravel Roads", "Dirt Roads", "Paved Roads", "No Roads"],
+            "answer": "Paved Roads" }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747244355636!6m8!1m7!1sQh69mC8CzE-L1uiqK9-v5w!2m2!1d43.31302942031704!2d-116.0279396934664!3f275.64540060601206!4f-3.5180385169296926!5f0.7820865974627469",
+        "questions": [
+          { "question": "Is the land arable?", "answer": "No" },
+          {
+          "type": "multiple-choice",
+          "question": "What climate region is this area a part of?",
+          "options": ["Tropical Climate", "Mediterranean Climate", "Dry Climate", "Moderate Climate"],
+          "answer": "Dry Climate"
+          }
+        ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747151839871!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRF8yT0tLZnc.!2m2!1d21.42254528047561!2d39.82619011687317!3f344.4510043733093!4f21.854995469316123!5f0.7820865974627469",
+      "questions": [
+        { "question": "What religion is shown in this landscape?", "answer": "Islam" },
+        { "question": "What language is visible?", "answer": "Arabic" },
+        { "question": "What country is this located in?", "answer": "Saudi Arabia"}
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747152282651!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJREVqT1RGT2c.!2m2!1d55.75500000335755!2d37.61889993836996!3f313.9336795889133!4f11.182058139385589!5f0.7820865974627469",
+      "questions": [
+        { "question": "What's the main religion relevant?", "answer": "Christianity" },
+        { "question": "What country are you in?", "answer": "Russia" }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747164283882!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzJqYWJWZUE.!2m2!1d41.90296878343602!2d12.45448479329444!3f345.1100300713851!4f28.47450255565687!5f0.4000000000000002",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Based on the art, in which country are you located?",
+          "options": ["United States", "Italy", "Israel", "Vatican City"],
+          "answer": "Vatican City"
+        },
+        {
+          "type": "text",
+          "question": "What is the name of this landmark?",
+          "answer": "Sistine Chapel"
+        },
+        {
+          "type": "text",
+          "question": "What is the most relevant religion to this site?",
+          "answer": "Christianity"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747326607863!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRHZrX2plM0FF!2m2!1d31.23967364336032!2d121.4961191669711!3f112.12948460718133!4f-6.086286972923858!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Is this city (Shanghai) a world city?",
+          "options": ["Yes", "No"],
+          "answer": "Yes"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is this city a megacity or a metacity? (Population: 24.87M)",
+          "options": ["Megacity", "Metacity"],
+          "answer": "Metacity"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747326936093!6m8!1m7!1s7QuNZavRzilZuGXmIM3Emw!2m2!1d-22.97060465141644!2d-43.42129156563846!3f201.24635736993866!4f-0.811373501185173!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the current economic situation of this area?",
+          "options": ["Economic disparity", "Economic Equality"],
+          "answer": "Economic disparity",
+          "hint": "Significant wealth gap is visible in the area."
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747411622071!6m8!1m7!1sCAoSHENJQUJJaEFHYnphcVFTZG1PbWdMQ0lRQURNQnQ.!2m2!1d40.43190768264349!2d116.5703748790251!3f253.71000797128116!4f-21.03822231442578!5f0.4000000000000002",
+      "questions": [
+        { "question": "What famous landmark is this?", "answer": "Great Wall of China" 
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What type of boundary is this?",
+          "options": ["Relic Boundary", "Subsequent Boundary", "Geometric Boundary", "Consquent Boundary"],
+          "answer": "Relic Boundary"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747412226563!6m8!1m7!1sCAoSHENJQUJJaEFEeWNLekNSd2M1bWZVWkJFQUFQcEg.!2m2!1d41.8902034329921!2d12.49224537230423!3f357.3495222180678!4f-0.19502260290568074!5f0.7820865974627469",
+      "questions": [
+        { "question": "What famous landmark is this?", "answer": "Colosseum" 
+        },
+        { "question": "What city is this in?", "answer": "Rome"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747415123467!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQzQwcFRXUEE.!2m2!1d41.28221627080994!2d16.41844979095439!3f65.61458857407243!4f-5.000131529938969!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What type of building is this?",
+          "options": ["Temple", "Synagogue", "Mosque", "Cathedral"],
+          "answer": "Cathedral"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What country is this most likely in?",
+          "options": ["Pakistan", "Italy", "Afghanistan", "Chad"],
+          "answer": "Italy"
+        },
+          {"question": "What is the religion relevant to this site?", "answer": "Christianity"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747757524496!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2xnS0hwamdF!2m2!1d14.09355980834441!2d74.48394561996946!3f163.20498856533914!4f25.34916414496105!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What type of building is this located in?",
+          "options": ["Office", "Religious", "Residential", "None"],
+          "answer": "Religious"
+        },
+        {
+          "question": "What country is this in?", "answer": "India"
+        },
+        {
+          "question": "What stage in the DTM is this country (India) in?", "answer": "3"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What is the religion most relative to this site?",
+          "options": ["Hinduism", "Sikhism", "Buddhism", "Christianity"],
+          "answer": "Hinduism"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is the religion (Hinduism) relevant to the site a universalising religion or ethnic religion?",
+          "options": ["Ethnic", "Universalizing"],
+          "answer": "Ethnic"
+        }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747670696806!6m8!1m7!1saF8CMdmoFEllhknDnw0Kdg!2m2!1d33.55700801946296!2d-111.8741203376356!3f313.3208985135234!4f-15.477453685093565!5f0.6170255862607458",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which theory of survival is visible?",
+          "options": ["Environmental Determinism", "Possibilism"],
+          "answer": "Possibilism"
+        }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747671342433!6m8!1m7!1sAXPFkJFao70d5JGFjYdLuw!2m2!1d22.33742822121746!2d114.1595644818933!3f260.6451698654401!4f-10.276548506517102!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Why is there English written on the bus? Pick the best answer.",
+          "options": ["Popular Tourist Destination", "Past colonization by the British", "English is the Lingua Franca"],
+          "answer": "English is the Lingua Franca"
+        }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747671814430!6m8!1m7!1s1wUn0uLQeiOdNapOxIgvyg!2m2!1d50.8390038888747!2d4.374097201331037!3f338.2862493805542!4f-34.11154444813128!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "This is the headquarters for which supranational organization?",
+          "options": ["NATO", "NAFTA", "EU"],
+          "answer": "EU",
+          "hint": "This organization is based in Europe and focuses on economic and political integration."
+        }
+      ]
+    },
+    {
+        "location": "https://www.google.com/maps/embed?pb=!4v1747772002041!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ09rWUxZb0FF!2m2!1d7.827576295354521!2d98.31284229010672!3f352.8372231611948!4f-32.51895526635681!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "Which country is this landmark located in?",
+          "options": ["United Kingdom", "Kenya", "Thailand", "United States"],
+          "answer": "Thailand",
+          "hint": "This country is known for its beaches and food, and is located in Aisa."
+        },
+        {
+          "type": "text",
+          "question": "What religion is shown in this landscape?",
+          "answer": "Buddhism",
+          "hint": "It's a monument dedicated to Siddharta Gautama."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Is this religion (Buddhism) universalizing or ethnic?",
+          "options": ["Universalizing", "Ethnic", "Both", "Neither"],
+          "answer": "Universalizing"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What climate is shown in this landscape?",
+          "options": ["Tropical", "Dry", "Moderate", "Continental"],
+          "answer": "Tropical"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747772634037!6m8!1m7!1sM6TwDQ-uiwYsDF-mszvOnQ!2m2!1d43.87549632396735!2d-111.3158887110951!3f21.24868046681194!4f1.1405677804553704!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What ring of the Von Thunen model is this location in?",
+          "options": ["1", "2", "3", "4", "5"],
+          "answer": "4",
+          "hint": "This area has a lot of field crops and grains."
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1747774192821!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRFU1SVdFTHc.!2m2!1d42.92975999156078!2d-122.0634995235598!3f180!4f0!5f0.7820865974627469",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "The people are traveling on a boat, what does this show?",
+          "options": ["Environmental Determinism", "Possibilism"],
+          "answer": "Possibilism"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "This natural area is protected. What does that say about the government's values?",
+          "options": ["Values Nature", "Values Urban Areas", "Values Kids", "Values Wealth"],
+          "answer": "Values Nature"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748452906826!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2V6cjJKdFFF!2m2!1d69.35875325504507!2d88.18704003081875!3f140.15159548431654!4f-60.93853048296656!5f0.4000000000000002",
+        "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What type of zoning is present?",
+          "options": ["Residential zoning", "Commercial zoning", "Industrial zoning"],
+          "answer": "Industrial zoning"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748453491809!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2hsS2J3a0FF!2m2!1d36.01608436842615!2d-114.7369011754237!3f213.0086587804809!4f8.448568441725996!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of such structure?",
+          "options": ["Change the environment", "Keep water levels constant", "Create energy sustainably", "Use energy before anyone else does"],
+          "answer": "Create energy sustainably",
+          "hint": "This structure is used to harness the power of water flow."
+        },
+        {
+          "type": "text",
+          "question": "What type of structure is observed?",
+          "answer": "Dam"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748453491809!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJQ2hsS2J3a0FF!2m2!1d36.01608436842615!2d-114.7369011754237!3f213.0086587804809!4f8.448568441725996!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of such structure?",
+          "options": ["Change the environment", "Keep water levels constant", "Create energy sustainably", "Use energy before anyone else does"],
+          "answer": "Create energy sustainably",
+          "hint": "This structure is used to harness the power of water flow."
+        },
+        {
+          "type": "text",
+          "question": "What type of structure is observed?",
+          "answer": "Dam"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748549132212!6m8!1m7!1sP8lmq1hWc7TxwcIFeh_jSQ!2m2!1d47.52280087916395!2d-122.0283904037639!3f144.86!4f-11.11!5f0.7820865974627469",
+      "questions": [
+        {
+          "type": "multiple-choice",
+          "question": "What is the purpose of such structure?",
+          "options": ["To Educate Teenage Kids", "To Generate Profits", "To House Residents of the City", "To Produce Energy"],
+          "answer": "To Educate Teenage Kids",
+          "hint": "This structure is used to harness the power of water flow."
+        },
+        {
+          "type": "multiple-choice",
+          "question": "What type of structure is observed?",
+          "options": ["Power Plant", "Hospital", "Factory", "School"],
+          "answer": "School"
+        },
+        {
+          "question": "What state is this located in?",
+          "answer": "Washington"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "People within a surrouding area attend this school, what is this type of region called?",
+          "options": ["Vernacular Region", "Functional Region", "Formal Region", "Perceptual Region"],
+          "answer": "Functional Region"
+        },
+        {
+          "type": "multiple-choice",
+          "question": "Who is the APHUG Teacher at this school?",
+          "options": ["Ms. Nelson", "Mr. Hakes", "Ms. Smith", "Mr. Harrington"],
+          "answer": "Ms. Smith"
+        }
+      ]
+    },
+    {
+      "location": "https://www.google.com/maps/embed?pb=!4v1748549758741!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJRDY2WVR1N1FF!2m2!1d-69.00674719635578!2d39.57812498009512!3f215.61459739251853!4f-10.290993004971654!5f0.7820865974627469",
+      "questions":[
+        {
+          "type": "multiple-choice",
+          "question": "Where is this located?",
+          "options": ["India", "Antarctica", "Mexico", "Australia"],
+          "answer": "Antarctica",
+          "hint": "Notice the extreme cold and lack of vegetation."
+        }
+      ]
+    }
+  ]

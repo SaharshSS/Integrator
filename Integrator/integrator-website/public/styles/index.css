@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Timer Bar */
+.timer-container {
+    position: fixed; /* Keep it fixed at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    z-index: 9999; /* Ensure the timer bar is always on top */
+}
+
+.timer-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #4caf50;
+    transition: width 0.1s linear;
+}
+
+/* Question Box */
+.question-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+    color: #333;
+    width: 300px;
+    z-index: 100; /* Ensure the question box is above the iframe */
+}
+
+.question-box label {
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.question-box input[type="text"],
+.question-box .options {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.question-box .options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.question-box .options button:hover {
+    background-color: #ddd;
+}
+
+/* Next Button */
+.next-button {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+
+/* Local Time Display */
+#localTime {
+    position: fixed; /* Keep it fixed at the top-right corner */
+    top: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #4caf50; /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 100; /* Ensure it is above other elements */
+}
+
+/* Score Chart */
+#scoreChart {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 100; /* Ensure the score chart is above the iframe */
+}
+
+#scoreChart h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#scoreChart p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Music Icon Container */
+#musicIconContainer {
+    position: absolute;
+    bottom: 24px; /* Slightly closer to the bottom */
+    right: 65px; /* More to the left than the bottom */
+    width: 80px; /* Set the icon width */
+    height: 80px; /* Set the icon height */
+    background-color: #4caf50; /* Green background */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Center the icon inside the container */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure it is above other elements */
+}
+
+/* Music Icon */
+#musicIcon {
+    width: 75px; /* Set the icon width */
+    height: 75px; /* Set the icon height */
+    object-fit: contain; /* Ensure the image scales proportionally */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+
+/* Skip Button Container */
+#skipButtonContainer {
+    position: absolute;
+    bottom: 24px; /* Adjust the position closer to the bottom */
+    right: 150px; /* Adjust the position to the left of the music icon */
+    width: 80px; /* Set the size of the container */
+    height: 80px; /* Set the size of the container */
+    background-color: #4caf50; /* Green background */
+    border-radius: 10px; /* Rounded corners */
+    display: flex; /* Center the icon inside the container */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure it is above other elements */
+}
+
+/* Skip Button */
+#skipButton {
+    width: 65px; /* Set the icon width */
+    height: 65px; /* Set the icon height */
+    object-fit: contain; /* Ensure the image scales proportionally */
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+}
+
+/* Ensure the iframe is below other elements */
+iframe#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    z-index: 1; /* Keep the iframe below the timer bar */
+}
+
+.top-left-box {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 300px;
+    height: 60px;
+    background-color: #4acf50;
+    border-radius: 6px;
+}

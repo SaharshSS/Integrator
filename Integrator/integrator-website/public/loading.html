@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <style>
+        /* Ensure the loading page takes up the full screen */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4caf50;
+            overflow: hidden;
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-family: 'Press Start 2P', Arial, sans-serif;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="integral-container">
+        <img src="assets/integral-svgrepo-com.svg" alt="Animated Integral Symbol" class="integral-symbol">
+    </div>
+    <h1>Loading...</h1>
+    <script>
+        // Get the target page from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetPage = urlParams.get('target') || 'index.html'; // Default to 'index.html'
+
+        // Redirect to the target page after 2 seconds
+        setTimeout(() => {
+            window.location.href = targetPage;
+        }, 1000);
+    </script>
+</body>
+</html>

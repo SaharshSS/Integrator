@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="400px" height="400px" viewBox="0 0 24 24" id="integral" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <path id="primary" 
+          d="M5,19l.38.76a2.24,2.24,0,0,0,2,1.24h0a2.24,2.24,0,0,0,2.13-1.53L12,12l2.49-7.47A2.24,2.24,0,0,1,16.62,3h0a2.24,2.24,0,0,1,2,1.24L19,5" 
+          style="fill: none; 
+                 stroke: white; 
+                 stroke-linecap: round; 
+                 stroke-linejoin: round; 
+                 stroke-width: 2;"
+          filter="url(#glow)">
+        
+        <animate attributeName="stroke-dasharray" 
+                 from="0,100"
+                 to="100,100"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
+        <animate attributeName="stroke-dashoffset"
+                 from="100"
+                 to="0"
+                 dur="2.5s"
+                 repeatCount="indefinite"/>
+    </path>
+</svg>

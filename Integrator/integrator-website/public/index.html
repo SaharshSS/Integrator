@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CulturGuessr</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <!-- Timer Bar -->
+    <div class="timer-container">
+        <div class="timer-bar" id="timerBar"></div>
+    </div>
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML" style="color: white; font-size: 8em;">
+        <msubsup>
+          <mo>∫</mo>
+          <mn>1</mn>
+          <mn>5</mn>
+        </msubsup>
+        <mfrac>
+          <mrow>
+            <mi>x</mi>
+            <mo>-</mo>
+            <mn>3</mn>
+          </mrow>
+          <mrow>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mn>2</mn>
+          </mrow>
+        </mfrac>
+        <mo>dx</mo>
+      </math>
+      
+
+    <!-- Top Left Box to Cover Google Maps Indicator -->
+    <div class="top-left-box">
+  <button
+    style="width:100%;height:100%;background:transparent;border:none;color:white;font-size:16px;cursor:pointer;"
+    onclick="window.location.href='congratulations.html'"
+  >
+    Finish!
+  </button>
+</div>
+
+    <style>
+    .top-left-box {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    width: 300px;
+    height: 60px;
+    background-color: #3498db;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10; /* Make sure it's above the map */
+    }
+
+    #map {
+    position: relative; /* or absolute/fixed if needed */
+    z-index: 1; /* Lower than .top-left-box */
+    }
+    </style>
+
+    <!-- Question Box -->
+    <div class="question-box">
+        <label id="questionLabel"></label>
+        <div id="answerInputContainer">
+            <input type="text" id="answerInput" placeholder="Type your answer here..." oninput="checkAnswer()">
+        </div>
+        <button class="next-button" id="nextButton" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Skip Button -->
+    <div id="skipButtonContainer">
+        <img id="skipButton" src="assets/SkipAlt-01.png" alt="Skip Question" onclick="skipQuestion()" style="cursor: pointer;" />
+    </div>
+
+    <!-- Score Chart -->
+    <div id="scoreChart">
+        <h2>Score</h2>
+        <p id="score">0</p>
+    </div>
+
+    <!-- Local Time Display -->
+    <div id="localTime"></div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" src="assets/music.mp3" loop></audio>
+    <div id="musicIconContainer">
+        <img id="musicIcon" src="assets/SoundStopped-01.png" alt="Sound Control" onclick="toggleMusic()" style="cursor: pointer;" />
+    </div>
+
+    <script>
+        function redirectToLoading(targetPage) {
+            // Redirect to the loading page with the target page as a query parameter
+            window.location.href = `loading.html?target=${targetPage}`;
+        }
+
+        function nextQuestion() {
+            const locationData = locations[currentLocationIndex];
+
+            if (currentQuestionIndex < locationData.questions.length - 1) {
+                // Move to the next question
+                currentQuestionIndex++;
+                loadLocation(currentLocationIndex);
+            } else if (currentLocationIndex < locations.length - 1) {
+                // All questions for the current location are completed
+                // Redirect to the "Do you want to continue?" page
+                currentQuestionIndex = 0; // Reset question index for the new location
+                window.location.href = 'continue.html'; // Redirect to continue.html
+            } else {
+                // End of the quiz
+                localStorage.setItem('finalScore', score); // Save the final score
+                window.location.href = 'congratulations.html'; // Redirect to the congratulations page
+            }
+        }
+
+        function skipQuestion() {
+            const locationData = locations[currentLocationIndex];
+
+            if (currentQuestionIndex < locationData.questions.length - 1) {
+                // Move to the next question
+                currentQuestionIndex++;
+                loadLocation(currentLocationIndex);
+            } else if (currentLocationIndex < locations.length - 1) {
+                // All questions for the current location are skipped
+                // Redirect to the "Do you want to continue?" page
+                currentQuestionIndex = 0; // Reset question index for the new location
+                currentLocationIndex++; // Move to the next location
+                window.location.href = 'continue.html'; // Redirect to continue.html
+            } else {
+                // End of the quiz
+                localStorage.setItem('finalScore', score); // Save the final score
+                window.location.href = 'congratulations.html'; // Redirect to the congratulations page
+            }
+        }
+    </script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

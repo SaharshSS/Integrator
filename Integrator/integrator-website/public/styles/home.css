@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4caf50;
+    color: white;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 300px; /* Double the size of the container */
+    height: 300px; /* Double the size of the container */
+    margin-bottom: 20px;
+}
+
+/* Static Globe */
+.static-globe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the globe */
+    width: 100%; /* 2.5 times the size of the container */
+    height: 100%; /* 2.5 times the size of the container */
+    object-fit: contain; /* Ensure the globe fits within the container */
+}
+
+/* Keyframes for rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-family: 'Press Start 2P', Arial, sans-serif;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
