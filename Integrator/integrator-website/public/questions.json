@@ -1,0 +1,72 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "integral": {
+        "lowerBound": "1",
+        "upperBound": "5",
+        "numerator": ["x", "-3"],
+        "denominator": ["x", "+2"]
+      },
+      "solution": "ln|x+2| + 5",
+      "difficulty": "Medium",
+      "hints": [
+        "Try partial fractions",
+        "Look for logarithmic form"
+      ],
+      "points": 100
+    },
+    {
+      "id": 2,
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "1",
+        "numerator": ["x^2"],
+        "denominator": ["1"]
+      },
+      "solution": "1/3",
+      "difficulty": "Easy",
+      "hints": [
+        "Use power rule",
+        "Remember to evaluate at bounds"
+      ],
+      "points": 50
+    },
+    {
+      "id": 3,
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "π",
+        "numerator": ["sin(x)"],
+        "denominator": ["1"]
+      },
+      "solution": "2",
+      "difficulty": "Medium",
+      "hints": [
+        "Think about the graph of sine",
+        "What's the area under one period?"
+      ],
+      "points": 75
+    },
+    {
+      "id": 4,
+      "type": "exponential",
+      "expression": {
+        "integral": {
+          "bounds": {
+            "lower": "0",
+            "upper": "1"
+          },
+          "integrand": {
+            "numerator": ["e^x"],
+            "denominator": ["1"]
+          }
+        }
+      },
+      "solution": "e - 1",
+      "difficulty": "Medium",
+      "hints": ["Remember the derivative of e^x", "Evaluate at the bounds"],
+      "points": 75
+    }
+  ]
+}
