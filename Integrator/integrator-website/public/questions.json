@@ -21,7 +21,7 @@
       "integral": {
         "lowerBound": "0",
         "upperBound": "1",
-        "numerator": ["x^2"],
+        "numerator": ["x^2", "-2x"],
         "denominator": ["1"]
       },
       "solution": "1/3",
@@ -50,23 +50,19 @@
     },
     {
       "id": 4,
-      "type": "exponential",
-      "expression": {
-        "integral": {
-          "bounds": {
-            "lower": "0",
-            "upper": "1"
-          },
-          "integrand": {
-            "numerator": ["e^x"],
-            "denominator": ["1"]
-          }
-        }
+      "integral": {
+        "lowerBound": "-1",
+        "upperBound": "1",
+        "numerator": ["x^3", "-x"],
+        "denominator": ["x^2", "+1"]
       },
-      "solution": "e - 1",
-      "difficulty": "Medium",
-      "hints": ["Remember the derivative of e^x", "Evaluate at the bounds"],
-      "points": 75
+      "solution": "0",
+      "difficulty": "Hard",
+      "hints": [
+        "Notice the symmetry",
+        "Think about odd functions"
+      ],
+      "points": 150
     }
   ]
 }

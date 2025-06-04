@@ -43,6 +43,33 @@ class Integrator {
     generateMathML(question) {
         const { lowerBound, upperBound, numerator, denominator } = question.integral;
         
+        function formatTerm(term) {
+            // Handle terms like x^2, sin(x), etc.
+            if (term.includes('^')) {
+                const [base, power] = term.split('^');
+                return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
+            }
+            // Handle functions like sin(x), cos(x)
+            if (term.includes('(')) {
+                const func = term.split('(')[0];
+                const arg = term.split('(')[1].replace(')', '');
+                return `<mi mathvariant="normal">${func}</mi><mo>(</mo><mi>${arg}</mi><mo>)</mo>`;
+            }
+            // Handle regular terms
+            return `<mi>${term}</mi>`;
+        }
+
+        function formatExpression(terms) {
+            return terms.map((term, index) => {
+                // If it's a negative term (except first term), handle the minus sign
+                if (term.startsWith('-')) {
+                    return `<mo>-</mo>${formatTerm(term.substring(1))}`;
+                }
+                // Add plus sign between terms
+                return index > 0 ? `<mo>+</mo>${formatTerm(term)}` : formatTerm(term);
+            }).join('');
+        }
+
         return `
             <math xmlns="http://www.w3.org/1998/Math/MathML" style="color: white; font-size: 8em;">
                 <msubsup>
@@ -51,8 +78,8 @@ class Integrator {
                     <mn>${upperBound}</mn>
                 </msubsup>
                 <mfrac>
-                    <mrow><mi>${numerator.join(' + ')}</mi></mrow>
-                    <mrow><mi>${denominator.join(' + ')}</mi></mrow>
+                    <mrow>${formatExpression(numerator)}</mrow>
+                    <mrow>${formatExpression(denominator)}</mrow>
                 </mfrac>
                 <mo>dx</mo>
             </math>
