@@ -2,6 +2,9 @@
 
 Integrator is an interactive web-based quiz game that tests your knowledge of integral based knowledge and solving ability.
 
+## Now live! 
+Go to: https://saharshss.github.io/Integrator/Integrator/integrator-website/public/home.html
+
 ## Features
 
 - **Interactive Quiz**: Test your knowledge of world cultures and landmarks.
