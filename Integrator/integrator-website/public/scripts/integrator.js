@@ -51,19 +51,30 @@ class Integrator {
 
             // Handle square roots
             if (term.startsWith('√')) {
-                const innerExpr = term.substring(1).match(/\((.*)\)/)[1];
+                const innerExpr = term.substring(1);
+                // Check if the entire expression is wrapped in parentheses
+                if (innerExpr.startsWith('(') && innerExpr.endsWith(')')) {
+                    const content = innerExpr.slice(1, -1);
+                    return `<msqrt>${formatExpression([content])}</msqrt>`;
+                }
                 return `<msqrt>${formatExpression([innerExpr])}</msqrt>`;
             }
             
             // Handle terms with exponents
             if (term.includes('^')) {
                 const parts = term.split('^');
-                const base = parts[0];
-                const power = parts[1];
+                let base = parts[0];
+                let power = parts[1];
+                
+                // If power contains parentheses, extract just the number
+                if (power.includes(')')) {
+                    power = power.replace(')', '');
+                    base = base + ')';  // Add the closing parenthesis to the base
+                }
                 
                 // Handle case where base contains parentheses
                 if (base.includes('(')) {
-                    const baseContent = base.match(/\((.*)\)/)[1];
+                    const baseContent = base.match(/\((.*?)\)/)[1];
                     return `<msup><mfenced><mrow>${formatExpression([baseContent])}</mrow></mfenced><mn>${power}</mn></msup>`;
                 } else {
                     return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
