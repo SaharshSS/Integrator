@@ -275,7 +275,7 @@
         "numerator": ["x^3"],
         "denominator": ["√(x^4 + 1)"]
       },
-      "solution": "1/2)√(x^4 + 1) + C",
+      "solution": "(1/2)√(x^4 + 1) + C",
       "difficulty": "Medium",
       "hints": ["Try substitution u = x^4 + 1"],
       "points": 90
@@ -316,7 +316,7 @@
         "numerator": ["1"],
         "denominator": ["1 - cos(x)"]
       },
-      "solution": "cot(x/2) + C",
+      "solution": "-cot(x) - csc(x) + C",
       "difficulty": "Hard",
       "hints": ["Use trig identity for 1 - cos(x)"],
       "points": 390
