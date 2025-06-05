@@ -385,9 +385,9 @@
         "numerator": "(x^3)√(x^4 + 4)"
       },
       "solution": "((x^4 + 4)^(3/2))/6 + C",
-      "difficulty": "Easy",
+      "difficulty": "Medium",
       "hints": ["Use u-sub = x^4 + 4"],
-      "points": 999
+      "points": 120
     },
         {
       "id": 30,
@@ -399,8 +399,8 @@
       },
       "solution": "2arcsin(x/2) + (1/2)x√(4-x^2) + C",
       "difficulty": "Hard",
-      "hints": ["Use trigsub as x = 2sinθ"],
-      "points": 999
+      "hints": ["Use trig-sub as x = 2sinθ"],
+      "points": 180
     },
         {
       "id": 31,
@@ -411,9 +411,9 @@
         "numerator": "sec(θ)"
       },
       "solution": "ln|sec(θ) + tan(θ)| + C",
-      "difficulty": "",
-      "hints": ["Use trigsub as u = sec(θ) + tan(θ)"],
-      "points": 999
+      "difficulty": "Easy",
+      "hints": ["Use trig-sub as u = sec(θ) + tan(θ)"],
+      "points": 100
     },
         {
       "id": 32,
@@ -423,10 +423,10 @@
         "upperBound": "",
         "numerator": "(sec(x))^2 / (tan(x) + 1))"
       },
-      "solution": "ln(|tan(x) + 1| + C)",
+      "solution": "ln(|tan(x) + 1|) + C",
       "difficulty": "Medium",
       "hints": ["Use u-sub = tan(x) + 1"],
-      "points": 999
+      "points": 140
     },
         {
       "id": 33,
@@ -436,10 +436,10 @@
         "upperBound": "5",
         "numerator": "3x^2 - 8x"
       },
-      "solution": "x^3 - 4x^2 + C",
+      "solution": "28",
       "difficulty": "Extremely Easy",
-      "hints": ["Basic integration"],
-      "points": 999
+      "hints": ["Basic integration and inputting values."],
+      "points": 80
     },
         {
       "id": 34,
@@ -451,8 +451,8 @@
       },
       "solution": "1 - (π/4)",
       "difficulty": "Medium",
-      "hints": ["Use the ID tan^2(x)=sec^2(x) - 1"],
-      "points": 999
+      "hints": ["Use the identity tan^2(x)=sec^2(x) - 1"],
+      "points": 120
     },
         {
       "id": 35,
@@ -465,7 +465,7 @@
       "solution": "-ln(|csc(x) + cos(x)|) + C",
       "difficulty": "Easy",
       "hints": ["Memorized integral"],
-      "points": 999
+      "points": 90
     },
         {
       "id": 36,
@@ -478,7 +478,7 @@
       "solution": "sin(x) + C",
       "difficulty": "Easy",
       "hints": ["Remember tan(x) is just sin(x)/cos(x)"],
-      "points": 999
+      "points": 80
     },
         {
       "id": 37,
@@ -490,37 +490,24 @@
       },
       "solution": "2ln(|x|) + (x^4)/8 + C",
       "difficulty": "Easy",
-      "hints": ["1/x is the same as ln|x|"],
-      "points": 999
+      "hints": ["1/x is the derivative ln|x|", "Use basic integrating techniques"],
+      "points": 110
     },
         {
       "id": 38,
-      "question": "Solve.",
-      "integral": {
-        "lowerBound": "",
-        "upperBound": "",
-        "numerator": "(5^x^2)x"
-      },
-      "solution": "(5^x^2) / (2ln(|5|) + C",
-      "difficulty": "Medium",
-      "hints": ["Use u-sub = x^2"],
-      "points": 999
-    },
-        {
-      "id": 39,
       "question": "Solve.",
       "integral": {
         "lowerBound": "0.5",
         "upperBound": "4",
         "numerator": "6^(2x)"
       },
-      "solution": "(6^(2x)) / 2ln(|6|) + C",
-      "difficulty": "Medium",
+      "solution": "839805/ln(6)",
+      "difficulty": "Hard",
       "hints": ["Use u-sub = 2x"],
-      "points": 999
+      "points": 160
     },
         {
-      "id": 40,
+      "id": 39,
       "question": "Solve.",
       "integral": {
         "lowerBound": "6",
@@ -530,7 +517,7 @@
       "solution": "-146",
       "difficulty": "Extremely Easy",
       "hints": ["Remember to flip the bounds and add a negitive when the lower bound is greater than the upper bound"],
-      "points": 999
+      "points": 95
     }
   ]
 }
