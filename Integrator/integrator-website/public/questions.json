@@ -141,8 +141,7 @@
       "integral": {
         "lowerBound": "-a",
         "upperBound": "a",
-        "numerator": ["f(x)"],
-        "denominator": []
+        "numerator": ["f(x)"]
       },
       "solution": "True, because the integral of an odd function over a symmetric interval is 0",
       "difficulty": "Medium",
