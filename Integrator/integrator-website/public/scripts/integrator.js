@@ -41,9 +41,14 @@ class Integrator {
     }
 
     generateMathML(question) {
-        const { lowerBound, upperBound, numerator, denominator } = question.integral;
+        const { lowerBound, upperBound, numerator } = question.integral;
         
         function formatTerm(term) {
+            // For simple numbers, just use mn tag
+            if (!isNaN(term)) {
+                return `<mn>${term}</mn>`;
+            }
+
             // Handle square roots
             if (term.startsWith('√')) {
                 const innerExpr = term.substring(1).match(/\((.*)\)/)[1];
@@ -87,6 +92,7 @@ class Integrator {
         }
 
         function formatExpression(terms) {
+            if (!terms || terms.length === 0) return '';
             return terms.map((term, index) => {
                 // If it's a negative term (except first term), handle the minus sign
                 if (term.startsWith('-') && index > 0) {
@@ -97,18 +103,22 @@ class Integrator {
             }).join('');
         }
 
+        // Just use the numerator directly if no denominator
+        const content = question.integral.denominator ? 
+            `<mfrac><mrow>${formatExpression(numerator)}</mrow><mrow>${formatExpression(question.integral.denominator)}</mrow></mfrac>` :
+            formatExpression(numerator);
+
         return `
-            <math xmlns="http://www.w3.org/1998/Math/MathML" style="color: white; font-size: 8em;">
-                <msubsup>
-                    <mo>∫</mo>
-                    <mn>${lowerBound || ''}</mn>
-                    <mn>${upperBound || ''}</mn>
-                </msubsup>
-                <mfrac>
-                    <mrow>${formatExpression(numerator)}</mrow>
-                    <mrow>${formatExpression(denominator)}</mrow>
-                </mfrac>
-                <mo>dx</mo>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" style="color: white; font-size: 8em;">
+                <mrow>
+                    <msubsup>
+                        <mo>∫</mo>
+                        <mn>${lowerBound || ''}</mn>
+                        <mn>${upperBound || ''}</mn>
+                    </msubsup>
+                    ${content}
+                    <mo>dx</mo>
+                </mrow>
             </math>
         `;
     }
