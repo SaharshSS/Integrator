@@ -305,6 +305,11 @@
         "denominator": ["(x^2 + 1)^2"]
       },
       "solution": "x / (2(x^2 + 1)) + (1/2)arctan(x) + C",
+      "wrongAnswers": [
+        "x / (2(x^2 + 1)) + (3/2)arctan(x) + C",
+        "x / (2(x^2 + 1)) + (5/2)arctan(x) + C",
+        "x / (3(x^2 + 2)) + (1/2)arctan(x) + C"
+      ],
       "difficulty": "Hard",
       "hints": ["Use u-sub = x^2 + 1"],
       "points": 190
@@ -318,6 +323,11 @@
         "numerator": ["cos(3x)"]
       },
       "solution": "(1/3)sin(3x) + C",
+      "wrongAnswers": [
+        "(1/3)sin(x) + C",
+        "(2/3)sin(3x) + C",
+        "(1/4)sin(3x) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use reverse chain rule"],
       "points": 90
@@ -332,6 +342,11 @@
         "denominator": ["1 - cos(x)"]
       },
       "solution": "-cot(x) - csc(x) + C",
+      "wrongAnswers": [
+        "-2cot(x) - 2csc(x) + C",
+        "-3cot(x) - sec(x) + C",
+        "-4cot(x) - 4csc(x) + C"
+      ],
       "difficulty": "Hard",
       "hints": ["Use trig identity for 1 - cos(x)"],
       "points": 390
@@ -346,6 +361,11 @@
         "denominator": ["x^2 + 4"]
       },
       "solution": "(1/2) arctan(x/2) + C",
+      "wrongAnswers": [
+        "(1/2) arcsin(x/4) + C",
+        "(1/2) arctan(x/3) + C",
+        "(1/2) arctan(x/4) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use the arctangent form"],
       "points": 112
@@ -360,6 +380,11 @@
         "denominator": ["x"]
       },
       "solution": "-ln(4)",
+      "wrongAnswers": [
+        "ln(4)",
+        "-ln(8)",
+        "3"
+      ],
       "difficulty": "Extremely Easy",
       "hints": ["Basic definition of ln, flip the bounds and add the negative sign infront of the integral"],
       "points": 1
@@ -374,6 +399,11 @@
         "denominator": ["x"]
       },
       "solution": "(1/2)(ln(x))^2 + C",
+      "wrongAnswers": [
+        "(1/3)(ln(x))^6 + C",
+        "(1/2)(ln(x))^3 + C",
+        "(1/2)(x)^2 + C"
+      ],
       "difficulty": "Easy",
       "hints": ["Use U-sub as ln(x)"],
       "points": 90
@@ -387,6 +417,11 @@
         "numerator": ["tan(2x)"]
       },
       "solution": "(-ln(|cos(2x)|)/2 + C",
+      "wrongAnswers": [
+        "(-ln(|sin(2x)|)/2 + C",
+        "(-ln(|csc(2x)|)/3 + C",
+        "(-2ln(|cos(2x)|) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use U-sub and the integral of tan (has ln)"],
       "points": 141
@@ -400,6 +435,11 @@
         "numerator": "(x^3)√(x^4 + 4)"
       },
       "solution": "((x^4 + 4)^(3/2))/6 + C",
+      "wrongAnswers": [
+        "((x^3 + 3)^(3/2))/8 + C",
+        "((x^4 + 4)^(3/2))/8 + C",
+        "((x^3 + 4)^(3/2))/6 + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use u-sub = x^4 + 4"],
       "points": 120
@@ -413,6 +453,11 @@
         "numerator": "√(4 - x^2)"
       },
       "solution": "2arcsin(x/2) + (1/2)x√(4-x^2) + C",
+      "wrongAnswers": [
+        "2arccos(x/2) + (1/2)x√(4-x^3) + C",
+        "2arcsin(x/2) + (1/3)x√(4-x^2) + C",
+        "2arcsin(x/4) + (1/2)x√(2-x^2) + C"
+      ],
       "difficulty": "Hard",
       "hints": ["Use trig-sub as x = 2sinθ"],
       "points": 180
@@ -426,6 +471,11 @@
         "numerator": "sec(θ)"
       },
       "solution": "ln|sec(θ) + tan(θ)| + C",
+      "wrongAnswers": [
+        "ln|csc(θ)| + C",
+        "ln|tan(θ) + tan(θ)| + C",
+        "ln|sec(θ) + csc(θ)| + C"
+      ],
       "difficulty": "Easy",
       "hints": ["Use trig-sub as u = sec(θ) + tan(θ)"],
       "points": 100
@@ -439,6 +489,11 @@
         "numerator": "(sec(x))^2 / (tan(x) + 1))"
       },
       "solution": "ln(|tan(x) + 1|) + C",
+      "wrongAnswers": [
+        "ln(|sec(x) + 1|) + C",
+        "ln(|csc(x) + 1|) + C",
+        "ln(|cos(x) + 1|) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use u-sub = tan(x) + 1"],
       "points": 140
@@ -452,6 +507,11 @@
         "numerator": "3x^2 - 8x"
       },
       "solution": "28",
+      "wrongAnswers": [
+        "26",
+        "27",
+        "25"
+      ],
       "difficulty": "Extremely Easy",
       "hints": ["Basic integration and inputting values."],
       "points": 80
@@ -465,6 +525,11 @@
         "numerator": "(tan(x))^2"
       },
       "solution": "1 - (π/4)",
+      "wrongAnswers": [
+        "π/4",
+        "π/2",
+        "π/3"
+      ],
       "difficulty": "Medium",
       "hints": ["Use the identity tan^2(x)=sec^2(x) - 1"],
       "points": 120
@@ -477,7 +542,12 @@
         "upperBound": "",
         "numerator": "csc(x)"
       },
-      "solution": "-ln(|csc(x) + cos(x)|) + C",
+      "solution": "-ln(|csc(x) + cot(x)|) + C",
+      "wrongAnswers": [
+        "ln(|csc(x) + cos(x)|) + C",
+        "-ln(|csc(x) + cos(x)|) + C",
+        "ln(|csc(x) + cot(x)|) + C"
+      ],
       "difficulty": "Easy",
       "hints": ["Memorized integral"],
       "points": 90
@@ -491,6 +561,11 @@
         "numerator": "sin(x)/tan(x)"
       },
       "solution": "sin(x) + C",
+      "wrongAnswers": [
+        "cos(x) + C",
+        "5cos(x) + C",
+        "5sin(x) + C"
+      ],
       "difficulty": "Easy",
       "hints": ["Remember tan(x) is just sin(x)/cos(x)"],
       "points": 80
@@ -504,6 +579,11 @@
         "numerator": "2/x + (x^3)/2"
       },
       "solution": "2ln(|x|) + (x^4)/8 + C",
+      "wrongAnswers": [
+        "2ln(|x|) + (x^4)/2 + C",
+        "ln(|x|) + (x^4)/2 + C",
+        "ln(|x^2|) + (x^3)/4 + C"
+      ],
       "difficulty": "Easy",
       "hints": ["1/x is the derivative ln|x|", "Use basic integrating techniques"],
       "points": 110
@@ -513,10 +593,15 @@
       "question": "Solve.",
       "integral": {
         "lowerBound": "0.5",
-        "upperBound": "4",
+        "upperBound": "1",
         "numerator": "6^(2x)"
       },
-      "solution": "839805/ln(6)",
+      "solution": "15/ln(6)",
+      "wrongAnswers": [
+        "19/ln(x)",
+        "12^x",
+        "6ln(x)"
+      ],
       "difficulty": "Hard",
       "hints": ["Use u-sub = 2x"],
       "points": 160
@@ -530,6 +615,11 @@
         "numerator": "73"
       },
       "solution": "-146",
+      "wrongAnswers": [
+        "146",
+        "73",
+        "-73"
+      ],
       "difficulty": "Extremely Easy",
       "hints": ["Remember to flip the bounds and add a negitive when the lower bound is greater than the upper bound"],
       "points": 95
