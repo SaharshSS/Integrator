@@ -166,9 +166,17 @@
         <input type="text" id="answer-input" placeholder="Enter your answer..." autocomplete="off" />
         <button id="submit-answer">Submit Answer</button>
         <button id="hint-button">Get Hint</button>
-        <button id="finish-button" onclick="window.location.href='continue.html'" style="margin-top: 20px; background-color: #FF5722;">Finish Quiz</button>
+        <button id="finish-button" onclick="finishQuiz()" style="margin-top: 20px; background-color: #FF5722;">Finish Quiz</button>
     </div>
 
     <script src="scripts/integrator.js"></script>
+    <script>
+        function finishQuiz() {
+            // Save the current score to localStorage
+            const currentScore = document.getElementById('score-display').textContent.split(': ')[1];
+            localStorage.setItem('finalScore', currentScore);
+            window.location.href = 'congratulations.html';
+        }
+    </script>
 </body>
 </html>
