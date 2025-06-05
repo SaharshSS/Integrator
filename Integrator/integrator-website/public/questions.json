@@ -221,7 +221,7 @@
         "lowerBound": "",
         "upperBound": "",
         "numerator": ["1"],
-        "denominator": ["sqrt(9-x^2)"]
+        "denominator": ["√9 - x^2"]
       },
       "solution": "arcsin(x^3)+C",
       "difficulty": "Medium",
@@ -233,10 +233,10 @@
       "question": "Solve.",
       "integral": {
         "lowerBound": "0",
-        "upperBound": "pi/2",
+        "upperBound": "π/2",
         "numerator": ["cos(x)^2"]
       },
-      "solution": "pi/4",
+      "solution": "π/4",
       "difficulty": "Hard",
       "hints": ["Use identity: cos^2(x) = (1 + cos(2x))/2"],
       "points": 390
@@ -287,7 +287,7 @@
         "lowerBound": "",
         "upperBound": "",
         "numerator": ["x^3"],
-        "denominator": ["√(x^4 + 1)"]
+        "denominator": ["√x^4 + 1"]
       },
       "solution": "1/2)√(x^4 + 1) + C",
       "difficulty": "Medium",

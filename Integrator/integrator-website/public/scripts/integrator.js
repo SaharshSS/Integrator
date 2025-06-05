@@ -52,15 +52,30 @@ class Integrator {
             // Handle square roots
             if (term.startsWith('√')) {
                 const innerExpr = term.substring(1);
-                // Check if the entire expression is wrapped in parentheses
-                if (innerExpr.startsWith('(') && innerExpr.endsWith(')')) {
-                    const content = innerExpr.slice(1, -1);
-                    return `<msqrt>${formatExpression([content])}</msqrt>`;
-                }
-                return `<msqrt>${formatExpression([innerExpr])}</msqrt>`;
+                // Remove outer parentheses if they exist
+                const content = innerExpr.startsWith('(') && innerExpr.endsWith(')') ? 
+                    innerExpr.slice(1, -1) : innerExpr;
+                
+                // Split the content by + or - to handle each term separately
+                const terms = content.split(/([+-])/g).map(t => t.trim()).filter(t => t);
+                const formattedTerms = terms.map((t, i) => {
+                    if (t === '+' || t === '-') return `<mo>${t}</mo>`;
+                    // Handle exponents within terms
+                    if (t.includes('^')) {
+                        const [base, power] = t.split('^');
+                        // If base contains x, only apply exponent to x
+                        if (base.includes('x')) {
+                            const [coef, ...rest] = base.split('x');
+                            return `${coef ? `<mn>${coef}</mn>` : ''}<msup><mi>x</mi><mn>${power}</mn></msup>`;
+                        }
+                        return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
+                    }
+                    return formatExpression([t]);
+                }).join('');
+                return `<msqrt><mrow>${formattedTerms}</mrow></msqrt>`;
             }
             
-            // Handle terms with exponents
+            // Handle terms with exponents outside of square roots
             if (term.includes('^')) {
                 const parts = term.split('^');
                 let base = parts[0];
@@ -104,13 +119,43 @@ class Integrator {
 
         function formatExpression(terms) {
             if (!terms || terms.length === 0) return '';
+            
+            function formatSingleTerm(term) {
+                // Split the term into parts by + or -
+                const parts = term.split(/([+-])/g).map(t => t.trim()).filter(t => t);
+                
+                return parts.map((part, idx) => {
+                    // Return operators as is
+                    if (part === '+' || part === '-') {
+                        return `<mo>${part}</mo>`;
+                    }
+                    
+                    // Handle terms with exponents
+                    if (part.includes('^')) {
+                        const [base, power] = part.split('^');
+                        // If base contains x, only apply exponent to x
+                        if (base.includes('x')) {
+                            const [coef, ...rest] = base.split('x');
+                            return `${coef ? `<mn>${coef}</mn>` : ''}<msup><mi>x</mi><mn>${power}</mn></msup>`;
+                        }
+                        return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
+                    }
+                    
+                    // Handle regular terms
+                    if (!isNaN(part)) {
+                        return `<mn>${part}</mn>`;
+                    }
+                    return `<mi>${part}</mi>`;
+                }).join('');
+            }
+            
             return terms.map((term, index) => {
                 // If it's a negative term (except first term), handle the minus sign
                 if (term.startsWith('-') && index > 0) {
-                    return `<mo>-</mo>${formatTerm(term.substring(1))}`;
+                    return `<mo>-</mo>${formatSingleTerm(term.substring(1))}`;
                 }
                 // Add plus sign between terms
-                return index > 0 ? `<mo>+</mo>${formatTerm(term)}` : formatTerm(term);
+                return index > 0 ? `<mo>+</mo>${formatSingleTerm(term)}` : formatSingleTerm(term);
             }).join('');
         }
 
