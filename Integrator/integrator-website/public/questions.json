@@ -5,8 +5,8 @@
       "integral": {
         "lowerBound": "1",
         "upperBound": "5",
-        "numerator": ["x", "-3"],
-        "denominator": ["x", "+2"]
+        "numerator": ["x - 3"],
+        "denominator": ["x + 2"]
       },
       "solution": "-5ln(7) + 5ln(3) + 4",
       "difficulty": "Medium",
@@ -22,7 +22,7 @@
         "lowerBound": "",
         "upperBound": "",
         "numerator": ["9"],
-        "denominator": ["4", "+", "x^2"]
+        "denominator": ["4 + x^2"]
       },
       "solution": "(9/2) arctan(x/2) + C",
       "difficulty": "Medium",
@@ -123,7 +123,7 @@
       "solution": "6",
       "difficulty": "Medium",
       "hints": [
-        "Use substitution u = x - 1",
+        "Use substitution: u = x - 1",
         "Break into improper integral if needed"
       ],
       "points": 100

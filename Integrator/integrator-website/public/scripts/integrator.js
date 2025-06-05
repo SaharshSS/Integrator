@@ -44,17 +44,44 @@ class Integrator {
         const { lowerBound, upperBound, numerator, denominator } = question.integral;
         
         function formatTerm(term) {
-            // Handle terms like x^2, sin(x), etc.
-            if (term.includes('^')) {
-                const [base, power] = term.split('^');
-                return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
+            // Handle square roots
+            if (term.startsWith('√')) {
+                const innerExpr = term.substring(1).match(/\((.*)\)/)[1];
+                return `<msqrt>${formatExpression([innerExpr])}</msqrt>`;
             }
+            
+            // Handle terms with exponents
+            if (term.includes('^')) {
+                const parts = term.split('^');
+                const base = parts[0];
+                const power = parts[1];
+                
+                // Handle case where base contains parentheses
+                if (base.includes('(')) {
+                    const baseContent = base.match(/\((.*)\)/)[1];
+                    return `<msup><mfenced><mrow>${formatExpression([baseContent])}</mrow></mfenced><mn>${power}</mn></msup>`;
+                } else {
+                    return `<msup><mi>${base}</mi><mn>${power}</mn></msup>`;
+                }
+            }
+
             // Handle functions like sin(x), cos(x)
             if (term.includes('(')) {
                 const func = term.split('(')[0];
                 const arg = term.split('(')[1].replace(')', '');
-                return `<mi mathvariant="normal">${func}</mi><mo>(</mo><mi>${arg}</mi><mo>)</mo>`;
+                return `<mi mathvariant="normal">${func}</mi><mo>(</mo>${formatExpression([arg])}<mo>)</mo>`;
             }
+
+            // Handle terms with basic operations (+ or -)
+            if (term.includes('+') || term.includes('-')) {
+                return term.split(/([+-])/).map((part, i) => {
+                    if (part === '+') return '<mo>+</mo>';
+                    if (part === '-') return '<mo>-</mo>';
+                    if (part) return `<mi>${part}</mi>`;
+                    return '';
+                }).join('');
+            }
+
             // Handle regular terms
             return `<mi>${term}</mi>`;
         }
@@ -62,7 +89,7 @@ class Integrator {
         function formatExpression(terms) {
             return terms.map((term, index) => {
                 // If it's a negative term (except first term), handle the minus sign
-                if (term.startsWith('-')) {
+                if (term.startsWith('-') && index > 0) {
                     return `<mo>-</mo>${formatTerm(term.substring(1))}`;
                 }
                 // Add plus sign between terms
@@ -74,8 +101,8 @@ class Integrator {
             <math xmlns="http://www.w3.org/1998/Math/MathML" style="color: white; font-size: 8em;">
                 <msubsup>
                     <mo>∫</mo>
-                    <mn>${lowerBound}</mn>
-                    <mn>${upperBound}</mn>
+                    <mn>${lowerBound || ''}</mn>
+                    <mn>${upperBound || ''}</mn>
                 </msubsup>
                 <mfrac>
                     <mrow>${formatExpression(numerator)}</mrow>
