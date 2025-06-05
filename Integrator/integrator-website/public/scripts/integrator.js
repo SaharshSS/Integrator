@@ -38,6 +38,35 @@ class Integrator {
 
         this.hintsUsed = 0;
         this.updateDisplay();
+        this.displayAnswerChoices();
+    }
+
+    displayAnswerChoices() {
+        const answerContainer = document.getElementById('answer-container');
+        if (!answerContainer || !this.currentQuestion) return;
+
+        // Clear previous answers
+        answerContainer.innerHTML = '';
+
+        // Get all possible answers including the correct one
+        if (!this.currentQuestion.wrongAnswers) {
+            console.error('No wrong answers found for question:', this.currentQuestion);
+            return;
+        }
+
+        const answers = [...this.currentQuestion.wrongAnswers, this.currentQuestion.solution];
+        
+        // Shuffle the answers
+        const shuffledAnswers = answers.sort(() => Math.random() - 0.5);
+
+        // Create buttons for each answer
+        shuffledAnswers.forEach((answer, index) => {
+            const button = document.createElement('button');
+            button.className = 'answer-button';
+            button.textContent = answer;
+            button.onclick = () => this.checkAnswer(answer);
+            answerContainer.appendChild(button);
+        });
     }
 
     generateMathML(question) {
@@ -184,13 +213,8 @@ class Integrator {
         const container = document.getElementById('integral-display');
         const questionBox = document.getElementById('question-box');
         
-        if (!container || !questionBox) {
-            console.error('Could not find display containers');
-            return;
-        }
-
-        if (!this.currentQuestion) {
-            console.error('No current question to display');
+        if (!container || !questionBox || !this.currentQuestion) {
+            console.error('Could not find display containers or question');
             return;
         }
 
@@ -210,30 +234,27 @@ class Integrator {
         const difficultyDisplay = document.getElementById('difficulty-display');
         if (difficultyDisplay) {
             difficultyDisplay.textContent = `Difficulty: ${this.currentQuestion.difficulty}`;
-            difficultyDisplay.className = `difficulty ${this.currentQuestion.difficulty.toLowerCase()}`;
+            difficultyDisplay.className = `difficulty ${this.currentQuestion.difficulty.toLowerCase().replace(/\s+/g, '')}`;
         }
     }
 
     checkAnswer(userAnswer) {
         if (!this.currentQuestion) return false;
 
-        const normalizedUserAnswer = userAnswer.replace(/\s+/g, '').toLowerCase();
-        const normalizedSolution = this.currentQuestion.solution.replace(/\s+/g, '').toLowerCase();
+        const normalizedUserAnswer = userAnswer.trim();
+        const normalizedSolution = this.currentQuestion.solution.trim();
 
         if (normalizedUserAnswer === normalizedSolution) {
             const pointsEarned = this.calculatePoints();
             this.score += pointsEarned;
             this.currentQuestion.completed = true;
-            return {
-                correct: true,
-                points: pointsEarned,
-                message: `Correct! You earned ${pointsEarned} points!`
-            };
+            alert(`Correct! You earned ${pointsEarned} points!`);
+            this.displayNewQuestion();
+            return true;
         }
-        return {
-            correct: false,
-            message: 'Try again!'
-        };
+        
+        alert('Try again!');
+        return false;
     }
 
     calculatePoints() {
@@ -264,28 +285,7 @@ class Integrator {
     }
 
     setupEventListeners() {
-        const submitButton = document.getElementById('submit-answer');
-        const answerInput = document.getElementById('answer-input');
         const hintButton = document.getElementById('hint-button');
-
-        if (submitButton && answerInput) {
-            submitButton.addEventListener('click', () => {
-                const result = this.checkAnswer(answerInput.value);
-                alert(result.message);
-                if (result.correct) {
-                    answerInput.value = '';
-                    this.displayNewQuestion();
-                }
-            });
-
-            // Also allow Enter key to submit
-            answerInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    submitButton.click();
-                }
-            });
-        }
-
         if (hintButton) {
             hintButton.addEventListener('click', () => {
                 alert(this.getHint());

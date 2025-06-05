@@ -10,6 +10,11 @@
         "denominator": ["x + 2"]
       },
       "solution": "-5ln(7) + 5ln(3) + 4",
+      "wrongAnswers": [
+        "-5ln(7) + 5ln(3) - 4",
+        "-5ln(7) - 5ln(3) + 4",
+        "5ln(7) - 5ln(3) + 4"
+      ],
       "difficulty": "Medium",
       "hints": ["Use u-substitution with x + 2", "Simplify the expression before integrating"],
       "points": 100
@@ -24,6 +29,11 @@
         "denominator": ["4 + x^2"]
       },
       "solution": "(9/2)arctan(x/2) + C",
+      "wrongAnswers": [
+        "9arctan(x/2) + C",
+        "(9/2)arctan(x) + C",
+        "(9/4)arctan(x/2) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Try trigonometric substitution", "Recognize arctangent pattern"],
       "points": 90
@@ -38,6 +48,11 @@
         "denominator": ["√(3x^3 + 4)"]
       },
       "solution": "(2/9)√(3x^3 + 4) + C",
+      "wrongAnswers": [
+        "(2/3)√(3x^3 + 4) + C",
+        "(1/9)√(3x^3 + 4) + C",
+        "(2/9)√(3x^3 - 4) + C"
+      ],
       "difficulty": "Hard",
       "hints": ["Use substitution for the expression inside the root", "Recognize the chain rule pattern"],
       "points": 120
@@ -389,7 +404,7 @@
       "hints": ["Use u-sub = x^4 + 4"],
       "points": 120
     },
-        {
+    {
       "id": 30,
       "question": "Solve.",
       "integral": {
@@ -402,7 +417,7 @@
       "hints": ["Use trig-sub as x = 2sinθ"],
       "points": 180
     },
-        {
+    {
       "id": 31,
       "question": "Solve.",
       "integral": {
@@ -415,7 +430,7 @@
       "hints": ["Use trig-sub as u = sec(θ) + tan(θ)"],
       "points": 100
     },
-        {
+    {
       "id": 32,
       "question": "Solve.",
       "integral": {
@@ -428,7 +443,7 @@
       "hints": ["Use u-sub = tan(x) + 1"],
       "points": 140
     },
-        {
+    {
       "id": 33,
       "question": "Solve.",
       "integral": {
@@ -441,7 +456,7 @@
       "hints": ["Basic integration and inputting values."],
       "points": 80
     },
-        {
+    {
       "id": 34,
       "question": "Solve.",
       "integral": {
@@ -454,7 +469,7 @@
       "hints": ["Use the identity tan^2(x)=sec^2(x) - 1"],
       "points": 120
     },
-        {
+    {
       "id": 35,
       "question": "Solve.",
       "integral": {
@@ -467,7 +482,7 @@
       "hints": ["Memorized integral"],
       "points": 90
     },
-        {
+    {
       "id": 36,
       "question": "Solve.",
       "integral": {
@@ -480,7 +495,7 @@
       "hints": ["Remember tan(x) is just sin(x)/cos(x)"],
       "points": 80
     },
-        {
+    {
       "id": 37,
       "question": "Solve.",
       "integral": {
@@ -493,7 +508,7 @@
       "hints": ["1/x is the derivative ln|x|", "Use basic integrating techniques"],
       "points": 110
     },
-        {
+    {
       "id": 38,
       "question": "Solve.",
       "integral": {
@@ -506,7 +521,7 @@
       "hints": ["Use u-sub = 2x"],
       "points": 160
     },
-        {
+    {
       "id": 39,
       "question": "Solve.",
       "integral": {
