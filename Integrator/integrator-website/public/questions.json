@@ -116,7 +116,7 @@
       "id": 9,
       "question": "If ∫ₐᵇ f(x) dx = 0 and f(x) > 0 for all x in (a, b), what can you conclude about [a, b]?",
       "integral": {},
-      "solution": "The interval [a, b] must be a single point, i.e., a = b",
+      "solution": "a = b",
       "difficulty": "Hard",
       "hints": ["The integral of a positive function can't be zero over an actual interval"],
       "points": 125
