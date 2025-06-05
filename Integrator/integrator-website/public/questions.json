@@ -263,7 +263,7 @@
         "numerator": ["x^1"]
       },
       "solution": "x^2/2 + C",
-      "difficulty": "extremely easy ",
+      "difficulty": "Extremely Easy",
       "hints": ["If you can't do this idk what to say 😭🙏"],
       "points": 23990809
     },
@@ -276,7 +276,7 @@
         "numerator": ["e^(2x)"]
       },
       "solution": "(1/2)e^(2x) + C",
-      "difficulty": "easy",
+      "difficulty": "Easy",
       "hints": ["Use basic exponential integration"],
       "points": 40
     },
@@ -359,7 +359,7 @@
         "denominator": ["x"]
       },
       "solution": "-ln(4)",
-      "difficulty": "easyyyyyyyyyyyyyyyyyyy",
+      "difficulty": "Extremely Easy",
       "hints": ["Basic definition of ln, flip the bounds and add the negative sign infront of the integral"],
       "points": 1
     },
@@ -373,7 +373,7 @@
         "denominator": ["x"]
       },
       "solution": "(1/2)(ln(x))^2 + C",
-      "difficulty": "easy",
+      "difficulty": "Easy",
       "hints": ["Use U-sub as ln(x)"],
       "points": 90
     },
@@ -386,7 +386,7 @@
         "numerator": ["(e^x^2)x"]
       },
       "solution": "(e^x^2)/2 + C",
-      "difficulty": "easy",
+      "difficulty": "Easy",
       "hints": ["Use U-sub as x^2"],
       "points": 90
     },

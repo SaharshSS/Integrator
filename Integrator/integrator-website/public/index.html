@@ -18,6 +18,17 @@
             font-family: Arial, sans-serif;
         }
 
+        #question-box {
+            margin: 20px 0;
+            padding: 15px 25px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            font-size: 1.2em;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
         #integral-display {
             margin: 20px 0;
             padding: 20px;
@@ -91,7 +102,12 @@
         }
 
         .easy {
-            background-color: #4CAF50;
+            background-color: #1B5E20;  /* Dark green */
+        }
+
+        .extremelyeasy {
+            background-color: white;
+            color: black;
         }
 
         .medium {
@@ -136,6 +152,10 @@
     <div class="info-panel">
         <div id="score-display">Score: 0</div>
         <div id="difficulty-display" class="difficulty">Difficulty: -</div>
+    </div>
+
+    <div id="question-box">
+        Loading...
     </div>
 
     <div id="integral-display">

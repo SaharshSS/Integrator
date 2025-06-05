@@ -124,9 +124,24 @@ class Integrator {
     }
 
     updateDisplay() {
+        console.log('Updating display with current question:', this.currentQuestion);
         const container = document.getElementById('integral-display');
-        if (!container) return;
+        const questionBox = document.getElementById('question-box');
+        
+        if (!container || !questionBox) {
+            console.error('Could not find display containers');
+            return;
+        }
 
+        if (!this.currentQuestion) {
+            console.error('No current question to display');
+            return;
+        }
+
+        // Update question box
+        questionBox.textContent = this.currentQuestion.question;
+
+        // Update integral display
         container.innerHTML = this.generateMathML(this.currentQuestion);
         
         // Update score display
@@ -139,7 +154,7 @@ class Integrator {
         const difficultyDisplay = document.getElementById('difficulty-display');
         if (difficultyDisplay) {
             difficultyDisplay.textContent = `Difficulty: ${this.currentQuestion.difficulty}`;
-            difficultyDisplay.className = `difficulty ${this.currentQuestion.difficulty}`;
+            difficultyDisplay.className = `difficulty ${this.currentQuestion.difficulty.toLowerCase()}`;
         }
     }
 
