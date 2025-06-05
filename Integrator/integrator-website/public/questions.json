@@ -316,7 +316,7 @@
         "numerator": ["1"],
         "denominator": ["1 - cos(x)"]
       },
-      "solution": "cot(x/2) + C",
+      "solution": "-cot(x) - csc(x) + C",
       "difficulty": "Hard",
       "hints": ["Use trig identity for 1 - cos(x)"],
       "points": 390
