@@ -1,399 +1,405 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "1",
-          "upperBound": "5",
-          "numerator": ["x - 3"],
-          "denominator": ["x + 2"]
-        },
-        "solution": "-5ln(7) + 5ln(3) + 4",
-        "difficulty": "Medium",
-        "hints": ["Use u-substitution with x + 2", "Simplify the expression before integrating"],
-        "points": 100
+  "questions": [
+    {
+      "id": 1,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "1",
+        "upperBound": "5",
+        "numerator": ["x - 3"],
+        "denominator": ["x + 2"]
       },
-      {
-        "id": 2,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["9"],
-          "denominator": ["4 + x^2"]
-        },
-        "solution": "(9/2) arctan(x/2) + C",
-        "difficulty": "Medium",
-        "hints": ["Try trigonometric substitution", "Recognize arctangent pattern"],
-        "points": 90
+      "solution": "-5ln(7) + 5ln(3) + 4",
+      "difficulty": "Medium",
+      "hints": ["Use u-substitution with x + 2", "Simplify the expression before integrating"],
+      "points": 100
+    },
+    {
+      "id": 2,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["9"],
+        "denominator": ["4 + x^2"]
       },
-      {
-        "id": 3,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^2"],
-          "denominator": ["√(3x^3 + 4)"]
-        },
-        "solution": "(2/9)√(3x^3 + 4) + C",
-        "difficulty": "Hard",
-        "hints": ["Use substitution for the expression inside the root", "Recognize the chain rule pattern"],
-        "points": 120
+      "solution": "(9/2) arctan(x/2) + C",
+      "difficulty": "Medium",
+      "hints": ["Try trigonometric substitution", "Recognize arctangent pattern"],
+      "points": 90
+    },
+    {
+      "id": 3,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^2"],
+        "denominator": ["√(3x^3 + 4)"]
       },
-      {
-        "id": 4,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["1"],
-          "denominator": ["√(4 - 5x^2)"]
-        },
-        "solution": "(1/√5)arcsin(√5x/2) + C",
-        "difficulty": "Medium",
-        "hints": ["Use inverse trigonometric identity", "Try a sine substitution"],
-        "points": 110
+      "solution": "(2/9)√(3x^3 + 4) + C",
+      "difficulty": "Hard",
+      "hints": ["Use substitution for the expression inside the root", "Recognize the chain rule pattern"],
+      "points": 120
+    },
+    {
+      "id": 4,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["1"],
+        "denominator": ["√(4 - 5x^2)"]
       },
-      {
-        "id": 5,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "0",
-          "upperBound": "3",
-          "numerator": ["1"],
-          "denominator": ["x^2"]
-        },
-        "solution": "Diverges",
-        "difficulty": "Hard",
-        "hints": ["Check behavior near x = 0", "Improper integral test"],
-        "points": 130
+      "solution": "(1/√5)arcsin(√5x/2) + C",
+      "difficulty": "Medium",
+      "hints": ["Use inverse trigonometric identity", "Try a sine substitution"],
+      "points": 110
+    },
+    {
+      "id": 5,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "3",
+        "numerator": ["1"],
+        "denominator": ["x^2"]
       },
-      {
-        "id": 6,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "1",
-          "upperBound": "∞",
-          "numerator": ["4"],
-          "denominator": ["x^3"]
-        },
-        "solution": "2",
-        "difficulty": "Medium",
-        "hints": ["Rewrite as a power function", "Use limits for infinity"],
-        "points": 95
+      "solution": "Diverges",
+      "difficulty": "Hard",
+      "hints": ["Check behavior near x = 0", "Improper integral test"],
+      "points": 130
+    },
+    {
+      "id": 6,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "1",
+        "upperBound": "∞",
+        "numerator": ["4"],
+        "denominator": ["x^3"]
       },
-      {
-        "id": 7,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["√(9 - x^2)"],
-          "denominator": ["x^2"]
-        },
-        "solution": "π - 3",
-        "difficulty": "Hard",
-        "hints": ["Try trigonometric substitution", "Convert to sine and cosine"],
-        "points": 125
+      "solution": "2",
+      "difficulty": "Medium",
+      "hints": ["Rewrite as a power function", "Use limits for infinity"],
+      "points": 95
+    },
+    {
+      "id": 7,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["√(9 - x^2)"],
+        "denominator": ["x^2"]
       },
-      {
-        "id": 8,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "0",
-          "upperBound": "2",
-          "numerator": ["1"],
-          "denominator": ["(x - 1)^(2/3)"]
-        },
-        "solution": "6",
-        "difficulty": "Medium",
-        "hints": ["Use substitution: u = x - 1", "Break into improper integral if needed"],
-        "points": 100
+      "solution": "π - 3",
+      "difficulty": "Hard",
+      "hints": ["Try trigonometric substitution", "Convert to sine and cosine"],
+      "points": 125
+    },
+    {
+      "id": 8,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "2",
+        "numerator": ["1"],
+        "denominator": ["(x - 1)^(2/3)"]
       },
-      {
-        "id": 9,
-        "question": "If ∫ₐᵇ f(x) dx = 0 and f(x) > 0 for all x in (a, b), what can you conclude about [a, b]?",
-        "integral": {},
-        "solution": "a = b",
-        "difficulty": "Hard",
-        "hints": ["The integral of a positive function can't be zero over an actual interval"],
-        "points": 125
+      "solution": "6",
+      "difficulty": "Medium",
+      "hints": ["Use substitution: u = x - 1", "Break into improper integral if needed"],
+      "points": 100
+    },
+    {
+      "id": 9,
+      "question": "If ∫ₐᵇ f(x) dx = 0 and f(x) > 0 for all x in (a, b), what can you conclude about [a, b]?",
+      "integral": {},
+      "solution": "The interval [a, b] must be a single point, i.e., a = b",
+      "difficulty": "Hard",
+      "hints": ["The integral of a positive function can't be zero over an actual interval"],
+      "points": 125
+    },
+    {
+      "id": 10,
+      "question": "What is the value of the integral if the bounds are flipped?",
+      "integral": {
+        "lowerBound": "5",
+        "upperBound": "1",
+        "numerator": ["x - 3"],
+        "denominator": ["x + 2"]
       },
-      {
-        "id": 10,
-        "question": "What is the value of the integral if the bounds are flipped?",
-        "integral": {
-          "lowerBound": "5",
-          "upperBound": "1",
-          "numerator": ["x - 3"],
-          "denominator": ["x + 2"]
-        },
-        "solution": "-k",
-        "difficulty": "Medium",
-        "hints": ["Flipping bounds reverses the sign of a definite integral"],
-        "points": 90
+      "solution": "-k",
+      "difficulty": "Medium",
+      "hints": ["Flipping bounds reverses the sign of a definite integral"],
+      "points": 90
+    },
+    {
+      "id": 11,
+      "question": "True or False: ∫ from -a to a of an odd function is always 0.",
+      "integral": {
+        "lowerBound": "-a",
+        "upperBound": "a",
+        "numerator": ["f(x)"],
+        "denominator": []
       },
-      {
-        "id": 11,
-        "question": "True or False: ∫ from -a to a of an odd function is always 0.",
-        "integral": {
-          "lowerBound": "-a",
-          "upperBound": "a",
-          "numerator": ["f(x)"],
-          "denominator": []
-        },
-        "solution": "True, because the integral of an odd function over a symmetric interval is 0",
-        "difficulty": "Medium",
-        "hints": ["Sketch the graph of an odd function"],
-        "points": 95
+      "solution": "True, because the integral of an odd function over a symmetric interval is 0",
+      "difficulty": "Medium",
+      "hints": ["Sketch the graph of an odd function"],
+      "points": 95
+    },
+    {
+      "id": 12,
+      "question": "What substitution would most efficiently simplify this integral?",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^2"],
+        "denominator": ["√(3x^3 + 4)"]
       },
-      {
-        "id": 12,
-        "question": "What substitution would most efficiently simplify this integral?",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^2"],
-          "denominator": ["√(3x^3 + 4)"]
-        },
-        "solution": "u = 3x^3 + 4",
-        "difficulty": "Medium",
-        "hints": ["Look inside the root for a u-substitution"],
-        "points": 100
+      "solution": "u = 3x^3 + 4",
+      "difficulty": "Medium",
+      "hints": ["Look inside the root for a u-substitution"],
+      "points": 100
+    },
+    {
+      "id": 13,
+      "question": "What kind of discontinuity causes divergence in this integral?",
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "3",
+        "numerator": ["1"],
+        "denominator": ["x^2"]
       },
-      {
-        "id": 13,
-        "question": "What kind of discontinuity causes divergence in this integral?",
-        "integral": {
-          "lowerBound": "0",
-          "upperBound": "3",
-          "numerator": ["1"],
-          "denominator": ["x^2"]
-        },
-        "solution": "It's an infinite discontinuity at x = 0",
-        "difficulty": "Hard",
-        "hints": ["What happens as x approaches 0 from the right?"],
-        "points": 130
+      "solution": "It's an infinite discontinuity at x = 0",
+      "difficulty": "Hard",
+      "hints": ["What happens as x approaches 0 from the right?"],
+      "points": 130
+    },
+    {
+      "id": 14,
+      "question": "If ∫₀¹ f(x) dx = 5 and ∫₁³ f(x) dx = -2, what is ∫₃⁰ f(x) dx?",
+      "integral": {},
+      "solution": "∫₃⁰ f(x) dx = -3",
+      "difficulty": "Medium",
+      "hints": ["Add the two integrals and flip signs carefully"],
+      "points": 105
+    },
+    {
+      "id": 15,
+      "question": "What is the derivative of this integral expression F(x)?",
+      "integral": {
+        "lowerBound": "2",
+        "upperBound": "x",
+        "numerator": ["1"],
+        "denominator": ["t^2 + 1"]
       },
-      {
-        "id": 14,
-        "question": "If ∫₀¹ f(x) dx = 5 and ∫₁³ f(x) dx = -2, what is ∫₃⁰ f(x) dx?",
-        "integral": {},
-        "solution": "∫₃⁰ f(x) dx = -3",
-        "difficulty": "Medium",
-        "hints": ["Add the two integrals and flip signs carefully"],
-        "points": 105
+      "solution": "F′(x) = 1 / (x^2 + 1), which is always positive",
+      "difficulty": "Medium",
+      "hints": ["Use the Fundamental Theorem of Calculus", "What is the derivative of an integral from a constant to x?"],
+      "points": 110
+    },
+    {
+      "id": 16,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x"],
+        "denominator": ["x^2 + 1"]
       },
-      {
-        "id": 15,
-        "question": "What is the derivative of this integral expression F(x)?",
-        "integral": {
-          "lowerBound": "2",
-          "upperBound": "x",
-          "numerator": ["1"],
-          "denominator": ["t^2 + 1"]
-        },
-        "solution": "F′(x) = 1 / (x^2 + 1), which is always positive",
-        "difficulty": "Medium",
-        "hints": ["Use the Fundamental Theorem of Calculus", "What is the derivative of an integral from a constant to x?"],
-        "points": 110
+      "solution": "(1/2) ln(x^2 + 1) + C",
+      "difficulty": "Medium",
+      "hints": ["Use substitution u = x^2 + 1"],
+      "points": 120
+    },
+    {
+      "id": 17,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["1"],
+        "denominator": ["sqrt(9-x^2)"]
       },
-      {
-        "id": 16,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^2"]
-        },
-        "solution": "x^3/3 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "arcsin(x^3)+C",
+      "difficulty": "Medium",
+      "hints": ["Recognize arcsine pattern"],
+      "points": 90
+    },
+    {
+      "id": 18,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "0",
+        "upperBound": "pi/2",
+        "numerator": ["cos(x)^2"]
       },
-      {
-        "id": 17,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^3"]
-        },
-        "solution": "x^4/4 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "pi/4",
+      "difficulty": "Hard",
+      "hints": ["Use identity: cos^2(x) = (1 + cos(2x))/2"],
+      "points": 390
+    },
+    {
+      "id": 19,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["tan(x) sec^2(x)"]
       },
-      {
-        "id": 18,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^4"]
-        },
-        "solution": "x^5/5 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "(1/2)tan^2(x) + C",
+      "difficulty": "Medium",
+      "hints": ["(1/2)tan^2(x) + C"],
+      "points": 142
+    },
+    {
+      "id": 20,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^1"]
       },
-      {
-        "id": 19,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^5"]
-        },
-        "solution": "x^6/6 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "x^2/2 + C",
+      "difficulty": "extremely easy ",
+      "hints": ["If you can't do this idk what to say 😭🙏"],
+      "points": 23990809
+    },
+    {
+      "id": 21,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["e^(2x)"]
       },
-      {
-        "id": 20,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x"]
-        },
-        "solution": "x^2/2 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "(1/2)e^(2x) + C",
+      "difficulty": "easy",
+      "hints": ["Use basic exponential integration"],
+      "points": 40
+    },
+    {
+      "id": 22,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^3"],
+        "denominator": ["√(x^4 + 1)"]
       },
-      {
-        "id": 21,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^2"]
-        },
-        "solution": "x^3/3 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "1/2)√(x^4 + 1) + C",
+      "difficulty": "Medium",
+      "hints": ["Try substitution u = x^4 + 1"],
+      "points": 90
+    },
+    {
+      "id": 23,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^4"]
       },
-      {
-        "id": 22,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^3"]
-        },
-        "solution": "x^4/4 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "x^5/5 + C",
+      "difficulty": "Medium",
+      "hints": ["Use the power rule for integration"],
+      "points": 90
+    },
+    {
+      "id": 24,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^5"]
       },
-      {
-        "id": 23,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^4"]
-        },
-        "solution": "x^5/5 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "x^6/6 + C",
+      "difficulty": "Medium",
+      "hints": ["Use the power rule for integration"],
+      "points": 90
+    },
+    {
+      "id": 25,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["x^1"]
       },
-      {
-        "id": 24,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^5"]
-        },
-        "solution": "x^6/6 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "x^2/2 + C",
+      "difficulty": "Medium",
+      "hints": ["Use the power rule for integration"],
+      "points": 90
+    },
+    {
+      "id": 26,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["1"],
+        "denominator": ["x^2 + 4"]
       },
-      {
-        "id": 25,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^1"]
-        },
-        "solution": "x^2/2 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "(1/2) arctan(x/2) + C",
+      "difficulty": "Medium",
+      "hints": ["Use the arctangent form"],
+      "points": 112.2
+    },
+    {
+      "id": 27,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "4",
+        "upperBound": "1",
+        "numerator": ["1"],
+        "denominator": ["x"]
       },
-      {
-        "id": 26,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^2"]
-        },
-        "solution": "x^3/3 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "-ln(4)",
+      "difficulty": "easyyyyyyyyyyyyyyyyyyy",
+      "hints": ["Basic definition of ln, flip the bounds and add the negative sign infront of the integral"],
+      "points": 1
+    },
+    {
+      "id": 28,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["ln(x)"],
+        "denominator": ["x"]
       },
-      {
-        "id": 27,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^3"]
-        },
-        "solution": "x^4/4 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "(1/2)(ln(x))^2 + C",
+      "difficulty": "easy",
+      "hints": ["Use U-sub as ln(x)"],
+      "points": 90
+    },
+    {
+      "id": 29,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["(e^x^2)x"]
       },
-      {
-        "id": 28,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^4"]
-        },
-        "solution": "x^5/5 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
+      "solution": "(e^x^2)/2 + C",
+      "difficulty": "easy",
+      "hints": ["Use U-sub as x^2"],
+      "points": 90
+    },
+    {
+      "id": 30,
+      "question": "Solve.",
+      "integral": {
+        "lowerBound": "",
+        "upperBound": "",
+        "numerator": ["tan(2x)"]
       },
-      {
-        "id": 29,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^5"]
-        },
-        "solution": "x^6/6 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
-      },
-      {
-        "id": 30,
-        "question": "Solve.",
-        "integral": {
-          "lowerBound": "",
-          "upperBound": "",
-          "numerator": ["x^1"]
-        },
-        "solution": "(x^2)/2 + C",
-        "difficulty": "Medium",
-        "hints": ["Use the power rule for integration"],
-        "points": 90
-      }
-    ]
-  }
+      "solution": "(-ln(|cos(2x)|)/2 + C",
+      "difficulty": "Medium",
+      "hints": ["Use U-sub and the integral of tan (has ln)"],
+      "points": 141
+    }
+  ]
+}
