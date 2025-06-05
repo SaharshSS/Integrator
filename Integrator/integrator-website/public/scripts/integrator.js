@@ -25,7 +25,10 @@ class Integrator {
 
     getRandomQuestion() {
         const availableQuestions = this.questions.filter(q => !q.completed);
+        console.log('Available questions:', availableQuestions.length);
+        
         if (availableQuestions.length === 0) {
+            console.log('No more questions available, ending game');
             this.endGame();
             return null;
         }
@@ -33,9 +36,11 @@ class Integrator {
     }
 
     displayNewQuestion() {
+        console.log('Getting new question');
         this.currentQuestion = this.getRandomQuestion();
         if (!this.currentQuestion) return;
 
+        console.log('Displaying new question:', this.currentQuestion.id);
         this.hintsUsed = 0;
         this.updateDisplay();
         this.displayAnswerChoices();
@@ -244,11 +249,18 @@ class Integrator {
         const normalizedUserAnswer = userAnswer.trim();
         const normalizedSolution = this.currentQuestion.solution.trim();
 
+        console.log('Checking answer:', {
+            given: normalizedUserAnswer,
+            correct: normalizedSolution,
+            isCorrect: normalizedUserAnswer === normalizedSolution
+        });
+
         if (normalizedUserAnswer === normalizedSolution) {
             const pointsEarned = this.calculatePoints();
             this.score += pointsEarned;
             this.currentQuestion.completed = true;
             alert(`Correct! You earned ${pointsEarned} points!`);
+            console.log('Answer correct, displaying new question');
             this.displayNewQuestion();
             return true;
         }
