@@ -67,6 +67,11 @@
         "denominator": ["√(4 - 5x^2)"]
       },
       "solution": "(1/√5)arcsin(√5x/2) + C",
+      "wrongAnswers": [
+        "arcsin(√5x/2) + C",
+        "arcsin(√5x/2)",
+        "(1/√5)arcsin(√5x/2)"
+      ],
       "difficulty": "Medium",
       "hints": ["Use inverse trigonometric identity", "Try a sine substitution"],
       "points": 110
@@ -81,6 +86,11 @@
         "denominator": ["x^2"]
       },
       "solution": "Diverges",
+      "wrongAnswers": [
+        "Converges",
+        "Diverges Conditionally",
+        "Converges Conditionally"
+      ],
       "difficulty": "Hard",
       "hints": ["Check behavior near x = 0", "Improper integral test"],
       "points": 130
@@ -95,6 +105,11 @@
         "denominator": ["x^3"]
       },
       "solution": "2",
+      "wrongAnswers": [
+        "Diverges",
+        "1",
+        "0"
+      ],
       "difficulty": "Medium",
       "hints": ["Rewrite as a power function", "Use limits for infinity"],
       "points": 95
@@ -109,6 +124,11 @@
         "denominator": ["x^2"]
       },
       "solution": "0",
+      "wrongAnswers": [
+        "1",
+        "Doesn't Exist",
+        "Infinity"
+      ],
       "difficulty": "Extremely Easy",
       "hints": ["The most basic concept of Integral Calculus"],
       "points": 50
@@ -123,6 +143,11 @@
         "denominator": ["(x - 1)^(2/3)"]
       },
       "solution": "6",
+      "wrongAnswers": [
+        "3",
+        "7",
+        "Diverges"
+      ],
       "difficulty": "Medium",
       "hints": ["Use substitution: u = x - 1", "Break into improper integral if needed"],
       "points": 100
@@ -132,6 +157,11 @@
       "question": "If ∫ₐᵇ f(x) dx = 0 and f(x) > 0 for all x in (a, b), what can you conclude about [a, b]?",
       "integral": {},
       "solution": "The interval [a, b] must be a single point, i.e., a = b",
+      "wrongAnswers": [
+        "The interval [a, b] must have c for which c is the absolute maximum",
+        "The point (a, b) is a point of inflection",
+        "There is not enough information"
+      ],
       "difficulty": "Hard",
       "hints": ["The integral of a positive function can't be zero over an actual interval"],
       "points": 125
@@ -146,6 +176,11 @@
         "denominator": ["x + 2"]
       },
       "solution": "-k",
+      "wrongAnswers": [
+        "|k|",
+        "1/k",
+        "k"
+      ],
       "difficulty": "Medium",
       "hints": ["Flipping bounds reverses the sign of a definite integral"],
       "points": 90
@@ -159,6 +194,11 @@
         "numerator": ["f(x)"]
       },
       "solution": "True",
+      "wrongAnswers": [
+        "False",
+        "Conditionally true",
+        "Not enough information"
+      ],
       "difficulty": "Medium",
       "hints": ["Sketch the graph of an odd function"],
       "points": 95
@@ -173,6 +213,11 @@
         "denominator": ["√(3x^3 + 4)"]
       },
       "solution": "u = 3x^3 + 4",
+      "wrongAnswers": [
+        "u = x^2",
+        "u = √(3x^3 + 4)",
+        "u = 3x^3"
+      ],
       "difficulty": "Medium",
       "hints": ["Look inside the root for a u-substitution"],
       "points": 100
@@ -186,7 +231,12 @@
         "numerator": ["1"],
         "denominator": ["x^2"]
       },
-      "solution": "It's an infinite discontinuity at x = 0",
+      "solution": "Infinite discontinuity at x = 0",
+      "wrongAnswers": [
+        "Jump discontinuity at x = 0",
+        "Hole discontinuity at x = 3",
+        "Hole discontinuity at x = 0"
+      ],
       "difficulty": "Hard",
       "hints": ["What happens as x approaches 0 from the right?"],
       "points": 130
@@ -196,6 +246,11 @@
       "question": "If ∫₀¹ f(x) dx = 5 and ∫₁³ f(x) dx = -2, what is ∫₃⁰ f(x) dx?",
       "integral": {},
       "solution": "-3",
+      "wrongAnswers": [
+        "3",
+        "7",
+        "-7"
+      ],
       "difficulty": "Medium",
       "hints": ["Add the two integrals and flip signs carefully"],
       "points": 105
@@ -209,7 +264,12 @@
         "numerator": ["1"],
         "denominator": ["t^2 + 1"]
       },
-      "solution": "F′(x) = 1 / (x^2 + 1), which is always positive",
+      "solution": "F′(x) = 1 / (x^2 + 1)",
+      "wrongAnswers": [
+        "F′(x) = 1 / (x^2 + 1) - 1 / 5",
+        "F(x) = 1 / (x^2 + 1)",
+        "F(x) = arctan(x)"
+      ],
       "difficulty": "Medium",
       "hints": ["Use the Fundamental Theorem of Calculus", "What is the derivative of an integral from a constant to x?"],
       "points": 110
@@ -224,6 +284,11 @@
         "denominator": ["x^2 + 1"]
       },
       "solution": "(1/2)ln(x^2 + 1) + C",
+      "wrongAnswers": [
+        "ln(x^2 + 1) + C",
+        "arctan(x) + C",
+        "ln(|x|) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Use substitution u = x^2 + 1"],
       "points": 120
@@ -237,7 +302,12 @@
         "numerator": ["1"],
         "denominator": ["√(9 - x^2)"]
       },
-      "solution": "arcsin(x/3)+C",
+      "solution": "arcsin(x/3) + C",
+      "wrongAnswers": [
+        "(1/3)arcsin(x) + C",
+        "arcsin(3x) + C",
+        "(1/9)arcsin(3x) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Recognize arcsine pattern"],
       "points": 90
@@ -251,6 +321,11 @@
         "numerator": ["tan(x)*(sec(x))^2"]
       },
       "solution": "(1/2)(tan(x))^2 + C",
+      "wrongAnswers": [
+        "tan(x))^2 + C",
+        "tan(x) + (1/3)(sec(x))^3 + C",
+        "(3/2)(tan(x))^2 + C"
+      ],
       "difficulty": "Medium",
       "hints": ["(1/2)tan^2(x) + C"],
       "points": 142
@@ -264,6 +339,11 @@
         "numerator": ["x"]
       },
       "solution": "x^2/2 + C",
+      "wrongAnswers": [
+        "x^2 + C",
+        "2x^2 + C",
+        "x^2/2"
+      ],
       "difficulty": "Extremely Easy",
       "hints": ["One of the first things we learned in calculus, power rule."],
       "points": 125
@@ -277,6 +357,11 @@
         "numerator": ["e^(2x)"]
       },
       "solution": "(1/2)e^(2x) + C",
+      "wrongAnswers": [
+        "e^(2x) + C",
+        "2e^(2x) + C",
+        "(1/2)e^(x) + C"
+      ],
       "difficulty": "Easy",
       "hints": ["Use basic exponential integration"],
       "points": 40
@@ -291,6 +376,11 @@
         "denominator": ["√(x^4 + 1)"]
       },
       "solution": "(1/2)√(x^4 + 1) + C",
+      "wrongAnswers": [
+        "2√(x^4 + 1) + C",
+        "4√(x^4 + 1) + C",
+        "(1/4)√(x^4 + 1) + C"
+      ],
       "difficulty": "Medium",
       "hints": ["Try substitution u = x^4 + 1"],
       "points": 90
