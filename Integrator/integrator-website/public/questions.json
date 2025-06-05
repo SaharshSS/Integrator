@@ -123,7 +123,7 @@
     },
     {
       "id": 10,
-      "question": "What is the value of the integral if the bounds are flipped?",
+      "question": "What is the value of the integral if the bounds are flipped? Assume the given integral is equal to the real number 'k'.",
       "integral": {
         "lowerBound": "5",
         "upperBound": "1",
