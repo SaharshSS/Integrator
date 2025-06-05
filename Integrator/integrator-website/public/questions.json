@@ -23,7 +23,7 @@
         "numerator": ["9"],
         "denominator": ["4 + x^2"]
       },
-      "solution": "(9/2) arctan(x/2) + C",
+      "solution": "(9/2)arctan(x/2) + C",
       "difficulty": "Medium",
       "hints": ["Try trigonometric substitution", "Recognize arctangent pattern"],
       "points": 90
@@ -88,15 +88,15 @@
       "id": 7,
       "question": "Solve.",
       "integral": {
-        "lowerBound": "",
-        "upperBound": "",
+        "lowerBound": "2",
+        "upperBound": "2",
         "numerator": ["√(9 - x^2)"],
         "denominator": ["x^2"]
       },
-      "solution": "π - 3",
-      "difficulty": "Hard",
-      "hints": ["Try trigonometric substitution", "Convert to sine and cosine"],
-      "points": 125
+      "solution": "0",
+      "difficulty": "Extremely Easy",
+      "hints": ["The most basic concept of Integral Calculus"],
+      "points": 50
     },
     {
       "id": 8,
@@ -180,7 +180,7 @@
       "id": 14,
       "question": "If ∫₀¹ f(x) dx = 5 and ∫₁³ f(x) dx = -2, what is ∫₃⁰ f(x) dx?",
       "integral": {},
-      "solution": "∫₃⁰ f(x) dx = -3",
+      "solution": "-3",
       "difficulty": "Medium",
       "hints": ["Add the two integrals and flip signs carefully"],
       "points": 105
@@ -220,9 +220,9 @@
         "lowerBound": "",
         "upperBound": "",
         "numerator": ["1"],
-        "denominator": ["√9 - x^2"]
+        "denominator": ["√(9 - x^2)"]
       },
-      "solution": "arcsin(x^3)+C",
+      "solution": "arcsin(x/3)+C",
       "difficulty": "Medium",
       "hints": ["Recognize arcsine pattern"],
       "points": 90
@@ -233,7 +233,7 @@
       "integral": {
         "lowerBound": "0",
         "upperBound": "π/2",
-        "numerator": ["cos(x)^2"]
+        "numerator": ["cos(x^2)"]
       },
       "solution": "π/4",
       "difficulty": "Hard",
@@ -246,7 +246,7 @@
       "integral": {
         "lowerBound": "",
         "upperBound": "",
-        "numerator": ["tan(x) sec^2(x)"]
+        "numerator": ["tan(x)*(sec(x))^2"]
       },
       "solution": "(1/2)tan^2(x) + C",
       "difficulty": "Medium",
@@ -264,7 +264,7 @@
       "solution": "x^2/2 + C",
       "difficulty": "Extremely Easy",
       "hints": ["If you can't do this idk what to say 😭🙏"],
-      "points": 23990809
+      "points": 125
     },
     {
       "id": 21,
@@ -286,7 +286,7 @@
         "lowerBound": "",
         "upperBound": "",
         "numerator": ["x^3"],
-        "denominator": ["√x^4 + 1"]
+        "denominator": ["√(x^4 + 1)"]
       },
       "solution": "1/2)√(x^4 + 1) + C",
       "difficulty": "Medium",
@@ -378,19 +378,6 @@
     },
     {
       "id": 29,
-      "question": "Solve.",
-      "integral": {
-        "lowerBound": "",
-        "upperBound": "",
-        "numerator": ["(e^x^2)x"]
-      },
-      "solution": "(e^x^2)/2 + C",
-      "difficulty": "Easy",
-      "hints": ["Use U-sub as x^2"],
-      "points": 90
-    },
-    {
-      "id": 30,
       "question": "Solve.",
       "integral": {
         "lowerBound": "",
